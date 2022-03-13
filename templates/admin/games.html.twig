@@ -1,0 +1,30 @@
+{% extends '@EasyAdmin/layout.html.twig' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Gestion des Joueurs</h1>
+
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Type de match</th>
+                <th scope="col">Date</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Gérer la feuille de match</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for game in games %}
+                <tr>
+                    <td>{{ game.category.name }}</td>
+                    <td>{{ game.gameDate|date('d/m/Y') }}</td>
+                    <td>{{ game.name }}</td>
+                    <td><a href="{{ path('manageGame', {'id': game.id}) }}">Gérer</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

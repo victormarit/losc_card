@@ -1,0 +1,31 @@
+{% extends '@EasyAdmin/layout.html.twig' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Gestion des Matches</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Type de match</th>
+                <th scope="col">Date</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Cartons Rouges</th>
+                <th scope="col">Cartons Jaunes</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for match in matches %}
+                <tr>
+                    <td>{{ match.category.name }}</td>
+                    <td>{{ match.gameDate|date('d/m/Y') }}</td>
+                    <td>{{ match.name }}</td>
+                    <td>{{ match.getRedCards }}</td>
+                    <td>{{ match.getYellowCards }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

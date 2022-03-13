@@ -1,0 +1,6 @@
+easy_admin:
+  entities:
+    Player:
+      class: App\Entity\Player
+    Game:
+      class: App\Entity\Game
