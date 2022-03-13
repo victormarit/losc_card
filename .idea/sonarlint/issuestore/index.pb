@@ -3,10 +3,6 @@ _
 /src/Controller/Admin/CardTypeCrudController.php,e\c\ecbf9961b8c8d0b09e75413946c3e6c3954e6140
 C
 src/Entity/Card.php,a\9\a9adfd43b8eee1c97a01c092f7c7aca0a3acb580
-a
-1src/Controller/Admin/SuspensionCrudController.php,7\5\755b712b862c314c652ece3ae430238a76818e60
-M
-translations/messages.fr.yaml,6\1\6115fa3a054e8f8853e80db1747415acdc41784b
 G
 src/Entity/Category.php,c\8\c85245800948ffb0569f65af912d0e2d467f18f3
 _

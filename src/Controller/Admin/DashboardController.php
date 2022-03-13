@@ -7,6 +7,7 @@ use App\Entity\Category;
 use App\Entity\Game;
 use App\Entity\Player;
 use App\Entity\Suspension;
+use App\Entity\User;
 use Doctrine\Persistence\ManagerRegistry;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -137,6 +138,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Players', "fa fa-user", Player::class),
             MenuItem::linkToCrud('Game', "fa fa-futbol", Game::class),
             MenuItem::linkToCrud('Compétitions', "fa fa-futbol", Category::class),
+            MenuItem::linkToCrud('Utilisateurs', "fa fa-user", User::class),
         ];
 
     }
