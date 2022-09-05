@@ -29,7 +29,7 @@ class Suspension
 
     /**
      * @ORM\ManyToOne(targetEntity=Player::class, inversedBy="suspensions")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $player;
 

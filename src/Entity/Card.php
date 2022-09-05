@@ -19,19 +19,19 @@ class Card
 
     /**
      * @ORM\ManyToOne(targetEntity=Player::class, inversedBy="cards")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $player;
 
     /**
      * @ORM\ManyToOne(targetEntity=Game::class, inversedBy="cards")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $game;
 
     /**
      * @ORM\ManyToOne(targetEntity=CardType::class, inversedBy="cards")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $cardType;
 
