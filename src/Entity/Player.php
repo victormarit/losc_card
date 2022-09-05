@@ -30,17 +30,17 @@ class Player
     private $lastname;
 
     /**
-     * @ORM\OneToMany(targetEntity=Card::class, mappedBy="player", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Card::class, mappedBy="player", cascade={"remove"})
      */
     private $cards;
 
     /**
-     * @ORM\OneToMany(targetEntity=Suspension::class, mappedBy="player", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Suspension::class, mappedBy="player", cascade={"remove"})
      */
     private $suspensions;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Game::class, inversedBy="players", orphanRemoval=true)
+     * @ORM\ManyToMany(targetEntity=Game::class, inversedBy="players", cascade={"remove"})
      */
     private $gameList;
 
